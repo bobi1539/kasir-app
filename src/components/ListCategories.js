@@ -45,7 +45,7 @@ export default class ListCategories extends Component {
     const { changeCategory, categoryYangDipilih } = this.props;
     return (
       <Col md={2} mt="2">
-        <h4>
+        <h4 className="mt-2">
           <strong>Daftar Kategori</strong>
         </h4>
         <hr />

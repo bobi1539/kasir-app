@@ -21,3 +21,16 @@ code {
 .btn-primary {
     background-color: #22668a;
 }
+
+@media only screen and (max-height: 900px) {
+    .hasil {
+        height: 365px;
+    }
+    .menu {
+        height: 450px;
+    }
+}
+
+.overflow-auto::-webkit-scrollbar {
+    display: none;
+}

@@ -36,27 +36,53 @@ export default class TotalBayar extends Component {
       return result + item.total_harga;
     }, 0);
     return (
-      <div className="fixed-bottom">
-        <Row>
-          <Col md={{ span: 3, offset: 9 }} className="p-4">
-            <hr />
-            <h4>
-              Total Bayar :{" "}
-              <strong className="float-end">
-                Rp. {numberWithCommas(totalBayar)}
-              </strong>
-            </h4>
-            <Button
-              variant="primary"
-              block
-              className="mt-2 float-end"
-              onClick={() => this.submitTotalBayar(totalBayar)}
-            >
-              <FontAwesomeIcon icon={faShoppingCart} /> <strong>Bayar</strong>
-            </Button>
-          </Col>
-        </Row>
-      </div>
+      <>
+        {/* web */}
+        <div className="fixed-bottom d-none d-md-block">
+          <Row>
+            <Col md={{ span: 3, offset: 9 }} className="p-4">
+              <hr />
+              <h4>
+                Total Bayar :{" "}
+                <strong className="float-end">
+                  Rp. {numberWithCommas(totalBayar)}
+                </strong>
+              </h4>
+              <Button
+                variant="primary"
+                block
+                className="mt-2 float-end"
+                onClick={() => this.submitTotalBayar(totalBayar)}
+              >
+                <FontAwesomeIcon icon={faShoppingCart} /> <strong>Bayar</strong>
+              </Button>
+            </Col>
+          </Row>
+        </div>
+
+        {/* mobile */}
+        <div className="d-sm-block d-md-none">
+          <Row>
+            <Col md={{ span: 3, offset: 9 }} className="p-4">
+              <hr />
+              <h4>
+                Total Bayar :{" "}
+                <strong className="float-end">
+                  Rp. {numberWithCommas(totalBayar)}
+                </strong>
+              </h4>
+              <Button
+                variant="primary"
+                block
+                className="mt-2 float-end"
+                onClick={() => this.submitTotalBayar(totalBayar)}
+              >
+                <FontAwesomeIcon icon={faShoppingCart} /> <strong>Bayar</strong>
+              </Button>
+            </Col>
+          </Row>
+        </div>
+      </>
     );
   }
 }
